@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import { Alltimezone } from './timezonedata';
+import React from 'react';
+import { useState } from 'react';
+import Dropdown from './dropdown';
 
 function App() {
+
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <select >
+      <option ></option>
+      {Alltimezone.map((item)=><option>{`${item.value} ${item.text}`}</option>)}
+     </select> */}
+     <Dropdown 
+     value=""
+     onChange={(val)=>console.log("return",val)}
+     />
+
     </div>
   );
 }
